@@ -31,6 +31,7 @@ namespace Proyecto
         {
             this.dgvFamilia = new System.Windows.Forms.DataGridView();
             this.btbCompletar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamilia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +53,21 @@ namespace Proyecto
             this.btbCompletar.UseVisualStyleBackColor = true;
             this.btbCompletar.Click += new System.EventHandler(this.btbCompletar_Click);
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(653, 83);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
             // FormularioFamilia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btbCompletar);
             this.Controls.Add(this.dgvFamilia);
             this.Name = "FormularioFamilia";
@@ -71,6 +82,7 @@ namespace Proyecto
 
         private System.Windows.Forms.DataGridView dgvFamilia;
         private System.Windows.Forms.Button btbCompletar;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
 
