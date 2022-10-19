@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace Modelo
 {
@@ -19,7 +20,7 @@ namespace Modelo
 
         public DataTable llenarFamilia()
         {
-            MySqlConnection cnx = new MySqlConnection("server=10.120.3.200;userid=alumn517;password=Alumno2022;database=repo_517");
+            MySqlConnection cnx = new MySqlConnection("server=win2016-01;userid=alumn517;password=Alumno2022;database=repo_517");
             MySqlCommand instuccion = new MySqlCommand();
             instuccion.Connection = cnx;
 
@@ -37,6 +38,11 @@ namespace Modelo
 
 
             return Tabla;
+        }
+
+        public void eliminarFamilia(string pId)
+        {
+            MessageBox.Show(pId);
         }
     }
 }

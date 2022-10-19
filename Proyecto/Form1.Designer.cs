@@ -30,8 +30,10 @@ namespace Proyecto
         private void InitializeComponent()
         {
             this.dgvFamilia = new System.Windows.Forms.DataGridView();
-            this.btbCompletar = new System.Windows.Forms.Button();
+            this.btbCerrar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamilia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,32 +45,53 @@ namespace Proyecto
             this.dgvFamilia.Size = new System.Drawing.Size(584, 251);
             this.dgvFamilia.TabIndex = 0;
             // 
-            // btbCompletar
+            // btbCerrar
             // 
-            this.btbCompletar.Location = new System.Drawing.Point(653, 358);
-            this.btbCompletar.Name = "btbCompletar";
-            this.btbCompletar.Size = new System.Drawing.Size(75, 23);
-            this.btbCompletar.TabIndex = 1;
-            this.btbCompletar.Text = "Completar";
-            this.btbCompletar.UseVisualStyleBackColor = true;
-            this.btbCompletar.Click += new System.EventHandler(this.btbCompletar_Click);
+            this.btbCerrar.Location = new System.Drawing.Point(653, 293);
+            this.btbCerrar.Name = "btbCerrar";
+            this.btbCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btbCerrar.TabIndex = 1;
+            this.btbCerrar.Text = "Cerrar";
+            this.btbCerrar.UseVisualStyleBackColor = true;
+            this.btbCerrar.Click += new System.EventHandler(this.btbCompletar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(653, 83);
+            this.btnAgregar.Location = new System.Drawing.Point(653, 65);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(653, 135);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(653, 214);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // FormularioFamilia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(781, 392);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.btbCompletar);
+            this.Controls.Add(this.btbCerrar);
             this.Controls.Add(this.dgvFamilia);
             this.Name = "FormularioFamilia";
             this.Text = "Form1";
@@ -81,8 +104,10 @@ namespace Proyecto
         #endregion
 
         private System.Windows.Forms.DataGridView dgvFamilia;
-        private System.Windows.Forms.Button btbCompletar;
+        private System.Windows.Forms.Button btbCerrar;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
 

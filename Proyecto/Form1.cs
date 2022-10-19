@@ -13,6 +13,8 @@ namespace Proyecto
 {
     public partial class FormularioFamilia : Form
     {
+        Familia familia1 = new Familia();
+
         public FormularioFamilia()
         {
             InitializeComponent();
@@ -20,14 +22,24 @@ namespace Proyecto
 
         private void btbCompletar_Click(object sender, EventArgs e)
         {
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Familia familia1 = new Familia();
-
+            
+            
             dgvFamilia.DataSource = familia1.llenarFamilia();
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string idfamilia = dgvFamilia.SelectedCells[0].Value.ToString();
+
+            familia1.eliminarFamilia(idfamilia);
+            
+                
         }
     }
 }
