@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Modelo
 {
@@ -42,7 +43,16 @@ namespace Modelo
 
         public void eliminarFamilia(string pId)
         {
-            MessageBox.Show(pId);
+            MySqlConnection cnx = new MySqlConnection("server=win2016-01;userid=alumn517;password=Alumno2022;database=repo_517");
+            MySqlCommand instruccion = new MySqlCommand();
+            instruccion.Connection = cnx;
+            cnx.Open();
+            
+            instruccion.CommandText = "delete from familia  where idfamilia = '" + pId + "'";
+            instruccion.ExecuteNonQuery();
+            cnx.Close();
+
+            //MessageBox.Show(pId);
         }
     }
 }

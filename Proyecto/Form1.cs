@@ -36,10 +36,19 @@ namespace Proyecto
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             string idfamilia = dgvFamilia.SelectedCells[0].Value.ToString();
-
-            familia1.eliminarFamilia(idfamilia);
             
-                
+            familia1.eliminarFamilia(idfamilia);
+
+            dgvFamilia.DataSource = familia1.llenarFamilia();
+
+
+
+
+        }
+
+        private void dgvFamilia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

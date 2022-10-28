@@ -44,6 +44,7 @@ namespace Proyecto
             this.dgvFamilia.Name = "dgvFamilia";
             this.dgvFamilia.Size = new System.Drawing.Size(584, 251);
             this.dgvFamilia.TabIndex = 0;
+            this.dgvFamilia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFamilia_CellContentClick);
             // 
             // btbCerrar
             // 
