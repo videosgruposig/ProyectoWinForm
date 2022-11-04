@@ -50,5 +50,12 @@ namespace Proyecto
         {
 
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AltaFamilia altaFamilia = new AltaFamilia();
+            altaFamilia.ShowDialog();
+
+        }
     }
 }

@@ -102,3 +102,4 @@ C:\Users\ET12Compu\Documents\ProyectoWinForm\Proyecto\obj\Debug\Proyecto.csproj.
 C:\Users\ET12Compu\Documents\ProyectoWinForm\Proyecto\obj\Debug\Proyecto.csproj.CopyComplete
 C:\Users\ET12Compu\Documents\ProyectoWinForm\Proyecto\obj\Debug\Proyecto.exe
 C:\Users\ET12Compu\Documents\ProyectoWinForm\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\ET12Compu\Documents\ProyectoWinForm\Proyecto\obj\Debug\Proyecto.AltaFamilia.resources

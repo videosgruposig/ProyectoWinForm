@@ -64,6 +64,7 @@ namespace Proyecto
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -95,7 +96,7 @@ namespace Proyecto
             this.Controls.Add(this.btbCerrar);
             this.Controls.Add(this.dgvFamilia);
             this.Name = "FormularioFamilia";
-            this.Text = "Form1";
+            this.Text = "Administrador de Familia";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFamilia)).EndInit();
             this.ResumeLayout(false);
