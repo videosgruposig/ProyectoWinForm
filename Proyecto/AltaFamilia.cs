@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Proyecto
 {
     public partial class AltaFamilia : Form
     {
+        Familia flia = new Familia();
         public AltaFamilia()
         {
             InitializeComponent();
@@ -25,6 +27,17 @@ namespace Proyecto
         private void btCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btAceptar_Click(object sender, EventArgs e)
+        {
+            flia.nombre = txtNombre.ToString();
+            flia.apellido = txtApellido.ToString();
+            flia.parentesco = txtParentesco.ToString();
+            flia.ocupacion = txtOcupacion.ToString();
+
+            flia.agregarFamilia(flia);
+
         }
     }
 }

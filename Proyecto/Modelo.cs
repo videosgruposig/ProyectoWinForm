@@ -54,5 +54,13 @@ namespace Modelo
 
             //MessageBox.Show(pId);
         }
+
+        public void agregarFamilia(Familia pFlia)
+        {
+            MessageBox.Show(pFlia.nombre);
+            /*
+             hacer todo para insertar en la BD
+             */
+        }
     }
 }
