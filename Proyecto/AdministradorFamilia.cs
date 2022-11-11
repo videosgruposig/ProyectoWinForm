@@ -56,6 +56,8 @@ namespace Proyecto
             AltaFamilia altaFamilia = new AltaFamilia();
             altaFamilia.ShowDialog();
 
+            dgvFamilia.DataSource = familia1.llenarFamilia();
+
         }
     }
 }

@@ -38,6 +38,10 @@ namespace Proyecto
 
             flia.agregarFamilia(flia);
 
+           
+
+            this.Close();
+
         }
     }
 }
