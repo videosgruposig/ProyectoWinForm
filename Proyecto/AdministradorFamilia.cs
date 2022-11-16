@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo;
+using Ubiety.Dns.Core.Records;
 
 namespace Proyecto
 {
@@ -27,7 +28,8 @@ namespace Proyecto
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            // Seteo Del DataGrid
+            dgvFamilia.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             
             dgvFamilia.DataSource = familia1.llenarFamilia();
 
@@ -53,10 +55,22 @@ namespace Proyecto
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AltaFamilia altaFamilia = new AltaFamilia();
+            AltaFamilia altaFamilia = new AltaFamilia("A");
+            altaFamilia.Text = "Alta de Familia";
             altaFamilia.ShowDialog();
 
             dgvFamilia.DataSource = familia1.llenarFamilia();
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            AltaFamilia modificarFamilia = new AltaFamilia("M");
+            modificarFamilia.Text = "Modificar Familia";
+            
+            modificarFamilia.ShowDialog();  
+
+
 
         }
     }

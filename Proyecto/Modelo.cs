@@ -59,8 +59,11 @@ namespace Modelo
 
         public void agregarFamilia(Familia pFlia)
         {
+          //  MessageBox.Show(pFlia.nombre);
+            
+            
             string textoRecibido = pFlia.nombre + " " + pFlia.apellido + " " + pFlia.ocupacion + " " + pFlia.parentesco;
-           // MessageBox.Show(textoRecibido);
+
 
             MySqlConnection cnx = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517");
             MySqlCommand instruccion = new MySqlCommand();
@@ -77,11 +80,12 @@ namespace Modelo
             cnx.Close();
 
             
-
+            
 
             /*
              hacer todo para insertar en la BD
              */
+            
         }
     }
 }
