@@ -55,7 +55,7 @@ namespace Proyecto
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AltaFamilia altaFamilia = new AltaFamilia("A");
+            AltaFamilia altaFamilia = new AltaFamilia("A", "");
             altaFamilia.Text = "Alta de Familia";
             altaFamilia.ShowDialog();
 
@@ -65,7 +65,10 @@ namespace Proyecto
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            AltaFamilia modificarFamilia = new AltaFamilia("M");
+            string idfamilia = dgvFamilia[0, dgvFamilia.CurrentRow.Index].Value.ToString();
+            
+            
+            AltaFamilia modificarFamilia = new AltaFamilia("M", idfamilia);
             modificarFamilia.Text = "Modificar Familia";
             
             modificarFamilia.ShowDialog();  
