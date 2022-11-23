@@ -90,13 +90,50 @@ namespace Modelo
 
         public Familia obtenerFamilia(string pIdFamilia)
         {
-            this.nombre = "pepe";
-            this.apellido = "toto";
-            this.idfamilia = Convert.ToInt32(pIdFamilia);
-            this.ocupacion = "titi";
-            this.parentesco = "me canse";
+
+            MySqlConnection cnx = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517"); //ServerName: win2016-01
+            MySqlCommand instuccion = new MySqlCommand();
+            instuccion.Connection = cnx;
+
+
+            //Tabla
+            cnx.Open();
+            MySqlDataAdapter Adapter = new MySqlDataAdapter();
+            instuccion.CommandText = "select * from familia where idfamilia = '" + pIdFamilia + "'";
+            Adapter.SelectCommand = instuccion;
+            DataSet SetDatos = new DataSet();
+            Adapter.Fill(SetDatos);
+            DataTable Tabla = new DataTable();
+            Tabla = SetDatos.Tables[0];
+            cnx.Close();
+
+            
+
+           // MessageBox.Show(Tabla.Rows[0][4].ToString());
+            this.nombre = Tabla.Rows[0][1].ToString();
+            this.apellido = Tabla.Rows[0][2].ToString();
+            // this.idfamilia = Convert.ToInt32(pIdFamilia);
+            this.ocupacion = Tabla.Rows[0][4].ToString();
+            this.parentesco = Tabla.Rows[0][3].ToString();
 
             return this;
+        }
+
+        public void actualizarFamilia(Familia pFlia, string IdFamilia)
+        {
+
+
+            MySqlConnection cnx = new MySqlConnection("server=10.120.2.123;userid=alumn517;password=Alumno2022;database=repo_517");
+            MySqlCommand instruccion = new MySqlCommand();
+            instruccion.Connection = cnx;
+            cnx.Open();
+
+            instruccion.CommandText = "update familia set nombre = '"+ pFlia.nombre +"', apellido = '"+ pFlia.apellido +"', parentesco = '"+ pFlia.parentesco +"', ocupacion = '"+ pFlia.ocupacion +"' where idfamilia = '"+ IdFamilia +"'";
+
+
+            instruccion.ExecuteNonQuery();
+            cnx.Close();
+
         }
     }
 }

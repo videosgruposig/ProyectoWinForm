@@ -66,12 +66,14 @@ namespace Proyecto
         private void btnModificar_Click(object sender, EventArgs e)
         {
             string idfamilia = dgvFamilia[0, dgvFamilia.CurrentRow.Index].Value.ToString();
-            
-            
+
+           // MessageBox.Show(idfamilia);
             AltaFamilia modificarFamilia = new AltaFamilia("M", idfamilia);
             modificarFamilia.Text = "Modificar Familia";
             
-            modificarFamilia.ShowDialog();  
+            modificarFamilia.ShowDialog();
+
+            dgvFamilia.DataSource = familia1.llenarFamilia();
 
 
 

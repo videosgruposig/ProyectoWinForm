@@ -29,6 +29,7 @@ namespace Proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioFamilia));
             this.dgvFamilia = new System.Windows.Forms.DataGridView();
             this.btbCerrar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -96,6 +97,7 @@ namespace Proyecto
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btbCerrar);
             this.Controls.Add(this.dgvFamilia);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormularioFamilia";
             this.Text = "Administrador de Familia";
             this.Load += new System.EventHandler(this.Form1_Load);
